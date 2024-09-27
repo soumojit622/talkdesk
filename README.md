@@ -2,29 +2,33 @@
 
 # 🚀 Talkdesk
 
-Talkdesk is a feature-packed Calendly clone built with **Next.js**, **React**, **Tailwind CSS**, **Prisma**, **Neon**, **Clerk**, and **Shadcn UI**. It allows you to easily schedule meetings, manage events, and provides a seamless authentication experience.
+Talkdesk is a feature-packed **Calendly clone** built with **Next.js**, **React**, **Tailwind CSS**, **Prisma**, **Neon**, **Clerk**, and **Shadcn UI**. It enables seamless meeting scheduling, event management, and authentication functionality with an elegant and responsive design.
 
-## 🌐 [Live Demo](https://talkdesk-demo.com) 
+> This project integrates the **Google Calendar API**, managed via **Google Cloud Console**, to streamline scheduling and event syncing.
 
-Check out the live demo [here](https://talkdesk-demo.com) 🎉
+## 🌐 [Live Demo](https://talkdesk-demo.com)
+
+Check out the live demo [here](https://talkdesk-demo.com) 🎉.
 
 ## 🚩 Features
 
 - 📅 **Meeting Scheduling**: Effortlessly schedule meetings with a user-friendly interface.
-- 🔐 **Authentication**: Secure authentication using **Clerk**.
-- 🛠️ **Event Management**: Built-in system for managing events.
-- ⚡ **Responsive Design**: Fast and mobile-friendly, styled with **Tailwind CSS**.
-- 🗄️ **Database Integration**: Data stored securely with **Prisma** and **Neon**.
+- 🔐 **Authentication**: Secure user authentication using **Clerk**.
+- 🛠️ **Event Management**: A system for managing meetings and events.
+- ⚡ **Responsive Design**: Optimized for mobile and desktop using **Tailwind CSS**.
+- 🗄️ **Database Integration**: Data is securely stored with **Prisma** and **Neon**.
+- 📆 **Google Calendar Sync**: Integrated **Google Calendar API** for syncing events.
 
 ## 📑 Technologies Used
 
-- **Next.js** (Framework for building fast applications)
-- **React** (Component-based UI)
-- **Tailwind CSS** (Utility-first styling)
-- **Prisma** (ORM for database)
-- **Neon** (PostgreSQL database)
-- **Clerk** (Authentication as a service)
-- **Shadcn UI** (Accessible and customizable components)
+- [**Next.js**](https://nextjs.org/) - A powerful framework for building fast, scalable web applications.
+- [**React**](https://react.dev/) - A component-based JavaScript library for building user interfaces.
+- [**Tailwind CSS**](https://tailwindcss.com/) - A utility-first CSS framework that makes it easy to build responsive UIs.
+- [**Prisma**](https://www.prisma.io/) - An ORM for managing databases seamlessly with JavaScript and TypeScript.
+- [**Neon**](https://neon.tech/) - A serverless PostgreSQL database solution optimized for cloud-native applications.
+- [**Clerk**](https://clerk.dev/) - A service that simplifies authentication and user management.
+- [**Shadcn UI**](https://shadcn.dev/) - A highly customizable and accessible component library for modern web applications.
+- [**Google Cloud Console**](https://console.cloud.google.com/) - Used to manage the **Google Calendar API** for scheduling events.
 
 ## 🛠️ Installation
 
@@ -91,12 +95,12 @@ We welcome all contributions! Here's how you can contribute:
 
 For any questions or feedback, feel free to contact me:
 
-- Email: [soumojitbanerjee@example.com](mailto:soumojitbanerjee22@gmail.com)
+- Email: [soumojitbanerjee22@gmail.com](mailto:soumojitbanerjee22@gmail.com)
 
-## 👨‍💻 Made by [Soumojit Banerjee]([https://www.linkedin.com/in/soumojit-banerjee-123456/](https://www.linkedin.com/in/soumojit-banerjee-4914b3228/))
+## 👨‍💻 Made by [Soumojit Banerjee](https://www.linkedin.com/in/soumojit-banerjee-4914b3228/)
 
-Feel free to connect with me on [LinkedIn]([https://www.linkedin.com/in/soumojit-banerjee-123456/](https://www.linkedin.com/in/soumojit-banerjee-4914b3228/)).
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/soumojit-banerjee-4914b3228/).
 
 ## 🙏 Acknowledgements
 
-Thanks to the amazing teams behind **Next.js**, **Prisma**, **Neon**, **Clerk**, and **Shadcn UI** for their powerful tools and resources.
+Thanks to the amazing teams behind **Next.js**, **Prisma**, **Neon**, **Clerk**, **Google Cloud Console**, and **Shadcn UI** for their powerful tools and resources.
