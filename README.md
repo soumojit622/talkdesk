@@ -1,4 +1,4 @@
-# ![Talkdesk Banner](https://your-banner-link.com/banner-image.png)
+# ![Talkdesk Banner](https://github.com/soumojit622/talkdesk/blob/master/public/banner.png)
 
 # 🚀 Talkdesk
 
@@ -6,9 +6,9 @@ Talkdesk is a feature-packed **Calendly clone** built with **Next.js**, **React*
 
 > This project integrates the **Google Calendar API**, managed via **Google Cloud Console**, to streamline scheduling and event syncing.
 
-## 🌐 [Live Demo](https://talkdesk-demo.com)
+## 🌐 [Live Demo](https://talkdeskk.vercel.app/)
 
-Check out the live demo [here](https://talkdesk-demo.com) 🎉.
+Check out the live demo [here](https://talkdeskk.vercel.app/) 🎉.
 
 ## 🚩 Features
 
@@ -36,7 +36,7 @@ To run **Talkdesk** locally, follow these steps:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/talkdesk.git
+    git clone https://github.com/soumojit622/talkdesk.git
     cd talkdesk
     ```
 
