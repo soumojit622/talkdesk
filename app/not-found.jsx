@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function NotFound() {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-white">
-      <div className="gif mb-6 rounded-lg overflow-hidden h-40 sm:h-52 md:h-64 lg:h-72">
+      <div className="gif mb-6 rounded-lg overflow-hidden h-40 sm:h-52 md:h-64 lg:h-72 relative">
         <Image
           src="https://i.postimg.cc/2yrFyxKv/giphy.gif"
           alt="Not Found GIF"
