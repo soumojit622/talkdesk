@@ -104,3 +104,7 @@ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/soumojit-
 ## 🙏 Acknowledgements
 
 Thanks to the amazing teams behind **Next.js**, **Prisma**, **Neon**, **Clerk**, **Google Cloud Console**, and **Shadcn UI** for their powerful tools and resources.
+
+## ❤️ Special Thanks
+
+A special thanks to **ChatGPT** for all your support in completing this project!
