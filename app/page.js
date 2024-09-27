@@ -1,101 +1,158 @@
+import React from "react";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { ArrowRight, Calendar, Clock, LinkIcon } from "lucide-react";
+import TestimonialsCarousel from "@/components/testimonials";
+import Link from "next/link";
 
-export default function Home() {
+const features = [
+  {
+    icon: Calendar,
+    title: "Event Creation",
+    description: "Set up and personalize your event types with ease.",
+  },
+  {
+    icon: Clock,
+    title: "Availability Management",
+    description: "Specify your availability to optimize scheduling.",
+  },
+  {
+    icon: LinkIcon,
+    title: "Personalized Links",
+    description: "Distribute your unique scheduling link effortlessly.",
+  },
+];
+
+const howItWorks = [
+  { step: "Register", description: "Create a free Talkdesk account." },
+  {
+    step: "Define Availability",
+    description: "Indicate when you are free for meetings.",
+  },
+  {
+    step: "Share Your Link",
+    description: "Provide your scheduling link to clients or colleagues.",
+  },
+  {
+    step: "Receive Bookings",
+    description: "Automatically get confirmations for new appointments.",
+  },
+];
+
+const Home = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="container mx-auto px-4 py-16">
+      {/* Hero Section */}
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-12 mb-24">
+        <div className="lg:w-1/2">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-violet-600 to-blue-500 text-transparent bg-clip-text pb-6">
+            Streamline Your Scheduling
+          </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <p className="text-lg sm:text-xl text-gray-600 mb-10">
+            Talkdesk assists you in efficiently managing your time. Set up
+            events, specify your availability, and allow others to book
+            appointments with you effortlessly.
+          </p>
+          <Link href={"/dashboard"}>
+            <Button
+              size="lg"
+              className="text-lg text-white bg-gradient-to-r from-violet-600 to-blue-500 shadow-lg transition-transform transform hover:scale-105"
+            >
+              Get Started <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="lg:w-1/2 flex justify-center">
+          <div className="relative w-full max-w-md aspect-square">
+            <Image
+              src="/poster.png"
+              alt="Scheduling illustration"
+              layout="fill"
+              objectFit="contain"
+              className="rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Key Features Section */}
+      <div className="mb-24">
+        <h2 className="text-3xl font-bold text-center mb-12 text-violet-600">
+          Main Features
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <Card
+              key={index}
+              className="transition-transform transform hover:scale-105 shadow-lg"
+            >
+              <CardHeader>
+                <feature.icon className="w-12 h-12 text-violet-500 mb-4 mx-auto" />
+                <CardTitle className="text-center text-violet-600 font-semibold">
+                  {feature.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-center text-gray-600">
+                  {feature.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+
+      {/* Testimonials Section */}
+      <div className="mb-24">
+        <h2 className="text-3xl font-bold text-center mb-12 text-violet-600">
+          What Users Are Saying
+        </h2>
+        <TestimonialsCarousel />
+      </div>
+
+      {/* How It Works Section */}
+      <div className="mb-24">
+        <h2 className="text-3xl font-bold text-center mb-12 text-violet-600">
+          How It Operates
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {howItWorks.map((step, index) => (
+            <div key={index} className="text-center">
+              <div className="bg-violet-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-md">
+                <span className="text-violet-600 font-bold text-xl">
+                  {index + 1}
+                </span>
+              </div>
+              <h3 className="font-semibold text-lg mb-2">{step.step}</h3>
+              <p className="text-gray-600">{step.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg p-8 text-center shadow-lg">
+        <h2 className="text-3xl font-bold mb-4">
+          Ready to Streamline Your Scheduling?
+        </h2>
+        <p className="text-lg md:text-xl mb-6">
+          Join countless professionals who rely on Talkdesk for effective time
+          management.
+        </p>
+        <Link href={"/dashboard"}>
+          <Button
+            size="lg"
+            variant="secondary"
+            className="bg-white text-violet-600 hover:bg-violet-100 shadow-md hover:shadow-lg transition-shadow duration-200"
+          >
+            Start for Free <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+        </Link>
+      </div>
+    </main>
   );
-}
+};
+
+export default Home;
