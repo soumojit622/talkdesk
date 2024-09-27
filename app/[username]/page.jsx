@@ -42,12 +42,12 @@ export default async function UserProfilePage({ params }) {
           {user.name}
         </h1>
         <p className="text-gray-700 text-center text-md md:text-lg mb-4 leading-relaxed px-2">
-          Greetings! You're on my scheduling page. Feel free to explore the
+          Greetings! You&apos;re on my scheduling page. Feel free to explore the
           available events and book a call at your convenience.
         </p>
         <p className="text-gray-500 text-center text-md mb-4 leading-relaxed px-2 italic">
-          Your journey towards valuable insights begins here. I'm excited to
-          connect and collaborate with you.
+          Your journey towards valuable insights begins here. I&apos;m excited
+          to connect and collaborate with you.
         </p>
       </div>
 

@@ -27,9 +27,10 @@ export default function DashboardPage() {
   });
 
   useEffect(() => {
-    setValue("username", user?.username);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isLoaded]);
+    if (isLoaded) {
+      setValue("username", user?.username);
+    }
+  }, [isLoaded, user, setValue]); // Include 'user' and 'setValue' as dependencies
 
   const {
     loading: loadingUpdates,
@@ -39,7 +40,7 @@ export default function DashboardPage() {
 
   useEffect(() => {
     (async () => await fnUpdates())();
-  }, []);
+  }, [fnUpdates]); // Include fnUpdates in the dependency array
 
   const { loading, error, fn: fnUpdateUsername } = useFetch(updateUsername);
 

@@ -1,4 +1,5 @@
 import { SignIn } from "@clerk/nextjs";
+import Image from "next/image"; // Import the Image component from next/image
 
 export default function Page() {
   return (
@@ -6,10 +7,12 @@ export default function Page() {
       <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
         {/* Image Section */}
         <aside className="relative block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
-          <img
+          <Image
             alt="Signin Background"
             src="https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-            className="absolute inset-0 h-full w-full object-cover"
+            layout="fill" // Use layout fill to cover the div
+            objectFit="cover" // This will maintain the aspect ratio of the image
+            className="absolute inset-0" // Keep the absolute positioning for proper layout
           />
         </aside>
 
