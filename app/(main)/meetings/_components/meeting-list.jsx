@@ -26,7 +26,7 @@ export default function MeetingList({ meetings, type }) {
           key={meeting.id}
           className="flex flex-col justify-between bg-white border border-gray-200 rounded-lg shadow-lg"
         >
-          <CardHeader className="bg-gradient-to-r from-purple-500 to-blue-500 rounded-t-lg p-4">
+          <CardHeader className="bg-gradient-to-r from-purple-500 to-blue-600 rounded-t-lg p-4">
             <CardTitle className="text-xl font-bold text-white">
               {meeting.event.title}
             </CardTitle>
@@ -40,13 +40,13 @@ export default function MeetingList({ meetings, type }) {
 
           <CardContent className="p-4">
             <div className="flex items-center mb-3 text-gray-700">
-              <Calendar className="mr-3 h-5 w-5 text-blue-500" />
+              <Calendar className="mr-3 h-5 w-5 text-violet-500" />
               <span className="font-medium">
                 {format(new Date(meeting.startTime), "MMMM d, yyyy")}
               </span>
             </div>
             <div className="flex items-center mb-3 text-gray-700">
-              <Clock className="mr-3 h-5 w-5 text-blue-500" />
+              <Clock className="mr-3 h-5 w-5 text-violet-500" />
               <span className="font-medium">
                 {format(new Date(meeting.startTime), "h:mm a")} -{" "}
                 {format(new Date(meeting.endTime), "h:mm a")}
@@ -54,12 +54,12 @@ export default function MeetingList({ meetings, type }) {
             </div>
             {meeting.meetLink && (
               <div className="flex items-center">
-                <Video className="mr-3 h-5 w-5 text-blue-500" />
+                <Video className="mr-3 h-5 w-5 text-violet-500" />
                 <a
                   href={meeting.meetLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 font-medium hover:underline"
+                  className="text-violet-600 font-medium hover:underline"
                 >
                   Join Meeting
                 </a>

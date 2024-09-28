@@ -79,18 +79,19 @@ const Home = () => {
 
       {/* Key Features Section */}
       <div className="mb-24">
-        <h2 className="text-3xl font-bold text-center mb-12 text-violet-600">
+        <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-600">
           Main Features
         </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="transition-transform transform hover:scale-105 shadow-lg"
+              className="transition-transform transform hover:scale-105 shadow-lg bg-white"
             >
               <CardHeader>
                 <feature.icon className="w-12 h-12 text-violet-500 mb-4 mx-auto" />
-                <CardTitle className="text-center text-violet-600 font-semibold">
+                <CardTitle className="text-center font-semibold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-600">
                   {feature.title}
                 </CardTitle>
               </CardHeader>
@@ -106,22 +107,24 @@ const Home = () => {
 
       {/* Testimonials Section */}
       <div className="mb-24">
-        <h2 className="text-3xl font-bold text-center mb-12 text-violet-600">
+        <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-600">
           What Users Are Saying
         </h2>
+
         <TestimonialsCarousel />
       </div>
 
       {/* How It Works Section */}
       <div className="mb-24">
-        <h2 className="text-3xl font-bold text-center mb-12 text-violet-600">
+        <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-600">
           How It Operates
         </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {howItWorks.map((step, index) => (
             <div key={index} className="text-center">
               <div className="bg-violet-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-md">
-                <span className="text-violet-600 font-bold text-xl">
+                <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-600">
                   {index + 1}
                 </span>
               </div>

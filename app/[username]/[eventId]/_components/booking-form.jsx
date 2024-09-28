@@ -73,21 +73,31 @@ export default function BookingForm({ event, availability }) {
 
   if (data) {
     return (
-      <div className="text-center p-10 border bg-white">
-        <h2 className="text-2xl font-bold mb-4">Booking successful!</h2>
+      <div className="text-center p-10 border border-gray-300 bg-white shadow-2xl rounded-lg">
+        <h2 className="text-4xl font-extrabold text-green-600 mb-2 drop-shadow-md">
+          Booking Successful!
+        </h2>
+        {/* Emoji placed under the heading for small screens */}
+        <span className="text-6xl mb-4 inline-block sm:mb-2">🎉</span>
         {data.meetLink && (
-          <p>
-            Join the meeting:{" "}
-            <a
-              href={data.meetLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:underline"
-            >
-              {data.meetLink}
-            </a>
+          <p className="text-lg text-gray-700 mb-4">
+            You can join the meeting using the link below:
           </p>
         )}
+        <a
+          href={data.meetLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-4 px-6 py-3 text-white bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 rounded-full shadow-md transition duration-300 transform"
+        >
+          Join Meeting
+        </a>
+        {/* Image added below the Join Meeting button */}
+        <img
+          src="/booking.png" // Replace with your image path
+          alt="Meeting illustration" // Provide a meaningful alt text
+          className="mt-6 w-full md:w-2/3 lg:w-1/2 mx-auto rounded-lg" // Adjust size and styling as needed
+        />
       </div>
     );
   }
@@ -116,7 +126,9 @@ export default function BookingForm({ event, availability }) {
         <div className="w-full h-full md:overflow-y-auto no-scrollbar">
           {selectedDate && (
             <div className="mb-4">
-              <h3 className="text-lg font-semibold mb-2">Available Time Slots</h3>
+              <h3 className="text-lg font-semibold mb-2">
+                Available Time Slots
+              </h3>
               <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
                 {timeSlots.map((slot) => (
                   <Button
@@ -167,14 +179,20 @@ export default function BookingForm({ event, availability }) {
               className="transition-all duration-200 ease-in-out border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-purple-300 hover:shadow-lg"
             />
           </div>
-          <Button 
-            type="submit" 
-            disabled={loading} 
+          <Button
+            type="submit"
+            disabled={loading}
             className={`w-full transition-all duration-200 ease-in-out ${
-              loading ? "bg-gray-300 cursor-not-allowed" : "bg-purple-600 hover:bg-purple-700"
+              loading
+                ? "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white cursor-not-allowed" // Change this color to your desired loading color
+                : "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
             }`}
           >
-            {loading ? "Scheduling..." : "Schedule Event"}
+            {loading ? (
+              <span className="text-white">Scheduling...</span> // Optional: Change text color while loading
+            ) : (
+              "Schedule Event"
+            )}
           </Button>
         </form>
       )}
